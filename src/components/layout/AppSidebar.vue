@@ -3,9 +3,9 @@
     :class="[
       'fixed mt-16 flex flex-col lg:mt-0 top-0 px-5 left-0 bg-white text-gray-900 h-screen transition-all duration-300 ease-in-out z-9999 border-r border-gray-200',
       {
-        'lg:w-[240px]': isExpanded || isMobileOpen || isHovered,
-        'lg:w-[90px]': isExpanded && !isHovered,
-        'translate-x-0 w-[240px]': isMobileOpen,
+        'lg:w-60': isExpanded || isMobileOpen || isHovered,
+        'lg:w-22.5': isExpanded && !isHovered,
+        'translate-x-0 w-60': isMobileOpen,
         '-translate-x-full': !isMobileOpen,
         'lg:translate-x-0': true,
       },
@@ -27,7 +27,7 @@
           <div v-for="(menuGroup, groupIndex) in menuGroups" :key="groupIndex">
             <h2
               :class="[
-                'mb-4 text-xs uppercase flex leading-[20px] text-gray-400',
+                'mb-4 text-xs uppercase flex leading-5 text-gray-400',
                 !isExpanded && !isHovered ? 'lg:justify-center' : 'justify-start',
               ]"
             >
@@ -52,6 +52,15 @@
                   <span v-if="isExpanded || isHovered || isMobileOpen" class="menu-item-text">
                     {{ item.name }}
                   </span>
+                  <ChevronDownIcon
+                    v-if="isExpanded || isHovered || isMobileOpen"
+                    :class="[
+                      'ml-auto w-5 h-5 transition-transform duration-200',
+                      {
+                        'rotate-180': isSubmenuOpen(groupIndex, index),
+                      },
+                    ]"
+                  />
                 </button>
                 <router-link
                   v-else-if="item.path"
@@ -64,6 +73,13 @@
                     },
                   ]"
                 >
+                  <span
+                    :class="[
+                      isActive(item.path) ? 'menu-item-icon-active' : 'menu-item-icon-inactive',
+                    ]"
+                  >
+                    <component :is="item.icon" />
+                  </span>
                   <span>{{ item.name }}</span>
                 </router-link>
                 <transition
@@ -136,6 +152,7 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useSidebar } from '@/composables/useSidebar'
+import { ChevronDownIcon, DashboardIcon } from '@/icons'
 import SidebarWidget from './SidebarWidget.vue'
 
 const route = useRoute()
@@ -145,8 +162,9 @@ const menuGroups = [
     title: 'Menu',
     items: [
       {
+        icon: DashboardIcon,
         name: 'Dashboard',
-        path: '/dashboard',
+        path: '/',
       },
       {
         name: 'Transaction',
@@ -179,9 +197,7 @@ const isSubmenuOpen = (groupIndex, itemIndex) => {
   return (
     openSubmenu.value === key ||
     (isAnySubmenuRouteActive.value &&
-      menuGroups[groupIndex].items[itemIndex].subItems?.some((subItem) => {
-        isActive(subItem.path)
-      }))
+      menuGroups[groupIndex].items[itemIndex].subItems?.some((subItem) => isActive(subItem.path)))
   )
 }
 
