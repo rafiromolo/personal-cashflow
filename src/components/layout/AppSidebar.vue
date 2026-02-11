@@ -49,6 +49,13 @@
                     !isExpanded && !isHovered ? 'lg:justify-center' : 'lg:justify-start',
                   ]"
                 >
+                  <span
+                    :class="[
+                      isActive(item.path) ? 'menu-item-icon-active' : 'menu-item-icon-inactive',
+                    ]"
+                  >
+                    <component :is="item.icon" />
+                  </span>
                   <span v-if="isExpanded || isHovered || isMobileOpen" class="menu-item-text">
                     {{ item.name }}
                   </span>
@@ -152,7 +159,7 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useSidebar } from '@/composables/useSidebar'
-import { ChevronDownIcon, DashboardIcon } from '@/icons'
+import { ChevronDownIcon, DashboardIcon, TransactionIcon } from '@/icons'
 import SidebarWidget from './SidebarWidget.vue'
 
 const route = useRoute()
@@ -167,6 +174,7 @@ const menuGroups = [
         path: '/',
       },
       {
+        icon: TransactionIcon,
         name: 'Transaction',
         subItems: [
           { name: 'Expense', path: '/transaction-expense', pro: false },
