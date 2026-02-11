@@ -4,7 +4,7 @@
       'fixed mt-16 flex flex-col lg:mt-0 top-0 px-5 left-0 bg-white text-gray-900 h-screen transition-all duration-300 ease-in-out z-9999 border-r border-gray-200',
       {
         'lg:w-60': isExpanded || isMobileOpen || isHovered,
-        'lg:w-22.5': isExpanded && !isHovered,
+        'lg:w-22.5': !isExpanded && !isHovered,
         'translate-x-0 w-60': isMobileOpen,
         '-translate-x-full': !isMobileOpen,
         'lg:translate-x-0': true,
