@@ -15,14 +15,19 @@
             </g>
           </svg>
         </div>
-        <span class="text-md font-bold uppercase">Income</span>
+        <span class="text-md font-bold uppercase">{{ title }}</span>
       </div>
       <div class="mt-4">
-        <h1 class="text-4xl font-black">Rp5,654,174</h1>
+        <h1 class="text-4xl font-black">Rp{{ amount.toLocaleString('id-ID') }}</h1>
       </div>
       <div class="mt-6 flex items-center gap-2">
         <span
-          class="flex items-center gap-1 w-fit rounded-sm py-0.5 px-2 bg-green-50 text-sm font-semibold text-green-600 border border-green-700"
+          :class="[
+            'flex items-center gap-1 w-fit rounded-sm py-0.5 px-2 text-sm font-semibold border',
+            trend === 'up'
+              ? 'bg-green-50 text-green-600 border-green-700'
+              : 'bg-red-50 text-red-600 border-red-700',
+          ]"
         >
           <svg
             class="fill-current"
@@ -39,10 +44,28 @@
               fill=""
             />
           </svg>
-          20%
+          {{ percentage }}%
         </span>
-        <span class="text-sm text-gray-400 italic">increasing from previous period.</span>
+        <span class="text-sm text-gray-400 italic">
+          {{ trend === 'up' ? 'Increase' : 'Decrease' }}
+        </span>
       </div>
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+const props = withDefaults(
+  defineProps<{
+    title: string
+    amount: number
+    percentage: number
+    trend: 'up' | 'down'
+  }>(),
+  {
+    amount: 0,
+    percentage: 0,
+    trend: 'up',
+  },
+)
+</script>
