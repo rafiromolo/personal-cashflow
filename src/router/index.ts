@@ -14,6 +14,14 @@ const router = createRouter({
         title: 'Dashboard',
       },
     },
+    {
+      path: '/transaction-expense',
+      name: 'TransactionExpense',
+      component: () => import('@/views/errors/UnderConstruction.vue'),
+      meta: {
+        title: 'Transaction Expense',
+      },
+    },
   ],
 })
 
