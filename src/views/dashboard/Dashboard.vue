@@ -7,6 +7,10 @@
       <div class="col-span-12 space-y-6 xl:col-span-6">
         <cards title="Expense" :amount="expense" :percentage="12" trend="down" />
       </div>
+
+      <div class="col-span-12">
+        <bar-chart />
+      </div>
     </div>
   </admin-layout>
 </template>
@@ -14,12 +18,14 @@
 <script>
 import AdminLayout from '@/components/layout/AdminLayout.vue'
 import Cards from '@/components/display/Cards.vue'
+import BarChart from '@/components/charts/BarChart.vue'
 
 export default {
   name: 'DashboardView',
   components: {
     AdminLayout,
     Cards,
+    BarChart,
   },
   data() {
     return {
