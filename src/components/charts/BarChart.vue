@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-full overflow-x-auto custom-scrollbar">
     <div id="chartOne" class="-ml-5 min-w-162.5 xl:min-w-full pl-2">
-      <VueApexCharts type="bar" height="180" :options="chartOptions" :series="series" />
+      <VueApexCharts type="bar" height="200" width="98%" :options="chartOptions" :series="series" />
     </div>
   </div>
 </template>
@@ -15,12 +15,16 @@ const series = ref([
     name: 'Sales',
     data: [168, 385, 201, 298, 187, 195, 291, 110, 215, 390, 280, 112],
   },
+  {
+    name: 'Cost',
+    data: [168, 385, 201, 298, 187, 195, 291, 110, 215, 390, 280, 112],
+  },
 ])
 
 const chartOptions = ref({
-  colors: ['#465fff'],
+  colors: ['#465fff', '#0ca1a6'],
   chart: {
-    fontFamily: 'Outfit, sans-serif',
+    fontFamily: 'Manrope, sans-serif',
     type: 'bar',
     toolbar: {
       show: false,
@@ -63,18 +67,28 @@ const chartOptions = ref({
     axisTicks: {
       show: false,
     },
+    labels: {
+      style: {
+        fontWeight: 700,
+      },
+    },
   },
   legend: {
     show: true,
-    position: 'top',
-    horizontalAlign: 'left',
-    fontFamily: 'Outfit',
+    position: 'bottom',
+    horizontalAlign: 'center',
+    fontFamily: 'Manrope',
     markers: {
       radius: 99,
     },
   },
   yaxis: {
     title: false,
+    labels: {
+      style: {
+        fontWeight: 700,
+      },
+    },
   },
   grid: {
     yaxis: {

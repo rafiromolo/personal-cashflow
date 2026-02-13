@@ -9,7 +9,7 @@
       </div>
 
       <div class="col-span-12">
-        <bar-chart />
+        <bar-chart-cards />
       </div>
     </div>
   </admin-layout>
@@ -19,13 +19,14 @@
 import AdminLayout from '@/components/layout/AdminLayout.vue'
 import Cards from '@/components/display/Cards.vue'
 import BarChart from '@/components/charts/BarChart.vue'
+import BarChartCards from '@/components/display/BarChartCards.vue'
 
 export default {
   name: 'DashboardView',
   components: {
     AdminLayout,
     Cards,
-    BarChart,
+    BarChartCards,
   },
   data() {
     return {
