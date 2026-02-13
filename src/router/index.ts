@@ -22,6 +22,22 @@ const router = createRouter({
         title: 'Transaction Expense',
       },
     },
+    {
+      path: '/transaction-income',
+      name: 'TransactionIncome',
+      component: () => import('@/views/errors/UnderConstruction.vue'),
+      meta: {
+        title: 'Transaction Income',
+      },
+    },
+    {
+      path: '/transaction-transfers',
+      name: 'TransactionTransfers',
+      component: () => import('@/views/errors/UnderConstruction.vue'),
+      meta: {
+        title: 'Transaction Transfers',
+      },
+    },
   ],
 })
 
