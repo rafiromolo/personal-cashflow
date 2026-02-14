@@ -15,7 +15,7 @@
       <div class="col-span-5"></div>
 
       <div class="col-span-12 xl:col-span-7">
-        <TableCards title="Recent Transactions" />
+        <recent-transaction title="Recent Transactions" />
       </div>
     </div>
   </admin-layout>
@@ -27,7 +27,7 @@ import Cards from '@/components/display/Cards.vue'
 import BarChart from '@/components/charts/BarChart.vue'
 import BarChartCards from '@/components/display/BarChartCards.vue'
 import LineChartCards from '@/components/display/LineChartCards.vue'
-import TableCards from '@/components/display/TableCards.vue'
+import RecentTransaction from '@/components/dashboard/RecentTransaction.vue'
 
 export default {
   name: 'DashboardView',
@@ -35,7 +35,7 @@ export default {
     AdminLayout,
     Cards,
     LineChartCards,
-    TableCards,
+    RecentTransaction,
   },
   data() {
     return {
