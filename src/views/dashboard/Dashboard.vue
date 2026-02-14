@@ -12,9 +12,11 @@
         <LineChartCards title="Expense Trend" />
       </div>
 
-      <div class="col-span-5"></div>
+      <div class="col-span-8">
+        <budget-realization title="Budget Realization" />
+      </div>
 
-      <div class="col-span-12 xl:col-span-7">
+      <div class="col-span-12 xl:col-span-4">
         <recent-transaction title="Recent Transactions" />
       </div>
     </div>
@@ -28,6 +30,7 @@ import BarChart from '@/components/charts/BarChart.vue'
 import BarChartCards from '@/components/display/BarChartCards.vue'
 import LineChartCards from '@/components/display/LineChartCards.vue'
 import RecentTransaction from '@/components/dashboard/RecentTransaction.vue'
+import BudgetRealization from '@/components/dashboard/BudgetRealization.vue'
 
 export default {
   name: 'DashboardView',
@@ -36,6 +39,7 @@ export default {
     Cards,
     LineChartCards,
     RecentTransaction,
+    BudgetRealization,
   },
   data() {
     return {
