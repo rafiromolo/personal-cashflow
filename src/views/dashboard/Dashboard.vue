@@ -43,7 +43,7 @@ export default {
   },
   data() {
     return {
-      income: 5654174,
+      income: 5000000,
       expense: 3000000,
     }
   },
