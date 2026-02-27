@@ -28,6 +28,7 @@
       </div>
 
       <button
+        @click="open = true"
         class="py-1.5 px-3 rounded-lg text-sm text-white bg-green-700 border border-green-800 hover:bg-green-800 hover:border-green-900"
       >
         <div class="flex items-center gap-2">
@@ -115,17 +116,27 @@
       </table>
     </div>
   </admin-layout>
+  <div v-if="open" class="fixed inset-0 bg-black/50 flex items-center justify-center z-999999">
+    <div class="bg-white rounded-2xl shadow-xl max-w-md p-8 relative">
+      <h2 class="text-lg font-semibold mb-4">Add Expense</h2>
+
+      <form action="">
+        <label for="expense-date" class="block text-sm mb-1">Date</label>
+        <input
+          type="date"
+          name="expense-date"
+          id="expense-date"
+          class="py-1.5 px-3 rounded-lg text-sm bg-gray-100 border border-gray-300 hover:bg-gray-200 hover:border-gray-400"
+        />
+      </form>
+    </div>
+  </div>
 </template>
 
-<script>
+<script setup>
+import { ref } from 'vue'
 import AdminLayout from '@/components/layout/AdminLayout.vue'
 import EditIcon from '@/icons/EditIcon.vue'
 
-export default {
-  name: 'TransactionExpenseView',
-  components: {
-    AdminLayout,
-    EditIcon,
-  },
-}
+const open = ref(false)
 </script>
