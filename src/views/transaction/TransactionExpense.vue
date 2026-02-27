@@ -121,13 +121,64 @@
       <h2 class="text-lg font-semibold mb-4">Add Expense</h2>
 
       <form action="">
-        <label for="expense-date" class="block text-sm mb-1">Date</label>
-        <input
-          type="date"
-          name="expense-date"
-          id="expense-date"
-          class="py-1.5 px-3 rounded-lg text-sm bg-gray-100 border border-gray-300 hover:bg-gray-200 hover:border-gray-400"
-        />
+        <div class="flex flex-col gap-2 mb-8">
+          <div class="flex gap-4">
+            <div class="flex-1 flex flex-col gap-1">
+              <label for="expense-date">Date</label>
+              <input
+                type="date"
+                name="expense-date"
+                id="expense-date"
+                class="py-1.5 px-3 rounded-lg text-sm bg-gray-100 border border-gray-300 hover:bg-gray-200 hover:border-gray-400"
+              />
+            </div>
+            <div class="flex-1 flex flex-col gap-1">
+              <label for="expense-category">Category</label>
+              <select
+                name="expense-category"
+                id="expense-category"
+                class="py-1.5 px-3 rounded-lg text-sm bg-gray-100 border border-gray-300 hover:bg-gray-200 hover:border-gray-400 focus:bg-gray-100"
+              >
+                <option value="all">All Categories</option>
+                <option value="fnb">Foods and Beverages</option>
+                <option value="transportation">Transportation</option>
+              </select>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-1 flex flex-col gap-1">
+              <label for="expense-amount">Amount</label>
+              <input
+                type="text"
+                name="expense-amount"
+                id="expense-amount"
+                class="py-1.5 px-3 rounded-lg text-sm bg-gray-100 border border-gray-300 hover:bg-gray-200 hover:border-gray-400"
+              />
+            </div>
+            <div class="flex-1 flex flex-col gap-1">
+              <label for="expense-account">Account</label>
+              <select
+                name="expense-account"
+                id="expense-account"
+                class="py-1.5 px-3 rounded-lg text-sm bg-gray-100 border border-gray-300 hover:bg-gray-200 hover:border-gray-400 focus:bg-gray-100"
+              >
+                <option value="cash">Cash</option>
+                <option value="mandiri">Bank Mandiri</option>
+                <option value="jago">Bank Jago</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-end gap-2">
+          <button
+            type="button"
+            @click="open = false"
+            class="py-1.5 px-3 rounded-lg text-sm text-white bg-red-600 border border-red-700 hover:bg-red-700 hover:border-red-800"
+          >
+            Cancel
+          </button>
+        </div>
       </form>
     </div>
   </div>
