@@ -33,7 +33,7 @@ const router = createRouter({
     {
       path: '/transaction-transfers',
       name: 'TransactionTransfers',
-      component: () => import('@/views/errors/UnderConstruction.vue'),
+      component: () => import('@/views/transaction/TransactionTransfer.vue'),
       meta: {
         title: 'Transaction Transfers',
       },

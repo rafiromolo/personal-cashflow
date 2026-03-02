@@ -179,7 +179,7 @@ const menuGroups = [
         subItems: [
           { name: 'Expense', path: '/transaction-expense', pro: false },
           { name: 'Income', path: '/transaction-income', pro: false },
-          { name: 'Transfers', path: '/transaction-transfers', pro: false },
+          { name: 'Transfer', path: '/transaction-transfers', pro: false },
         ],
       },
     ],
