@@ -7,26 +7,23 @@
       >
     </div>
 
-    <div class="flex justify-between mb-4">
-      <div class="flex gap-2">
-        <input
-          type="date"
-          name="filter-date"
-          id="filter-date"
-          class="py-1.5 px-3 rounded-lg text-sm bg-gray-100 border border-gray-300 hover:bg-gray-200 hover:border-gray-400"
-        />
+    <div class="flex gap-2 mb-4">
+      <input
+        type="date"
+        name="filter-date"
+        id="filter-date"
+        class="py-1.5 px-3 rounded-lg text-sm bg-gray-100 border border-gray-300 hover:bg-gray-200 hover:border-gray-400"
+      />
 
-        <select
-          name="filter-category"
-          id="filter-category"
-          class="py-1.5 px-3 rounded-lg text-sm bg-gray-100 border border-gray-300 hover:bg-gray-200 hover:border-gray-400 focus:bg-gray-100"
-        >
-          <option value="all">All Categories</option>
-          <option value="fnb">Foods and Beverages</option>
-          <option value="transportation">Transportation</option>
-        </select>
-      </div>
-
+      <select
+        name="filter-category"
+        id="filter-category"
+        class="py-1.5 px-3 rounded-lg text-sm bg-gray-100 border border-gray-300 hover:bg-gray-200 hover:border-gray-400 focus:bg-gray-100"
+      >
+        <option value="all">All Categories</option>
+        <option value="fnb">Foods and Beverages</option>
+        <option value="transportation">Transportation</option>
+      </select>
       <button
         @click="open = true"
         class="py-1.5 px-3 rounded-lg text-sm text-white bg-green-700 border border-green-800 hover:bg-green-800 hover:border-green-900"
