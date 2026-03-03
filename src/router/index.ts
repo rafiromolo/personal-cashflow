@@ -31,11 +31,19 @@ const router = createRouter({
       },
     },
     {
-      path: '/transaction-transfers',
-      name: 'TransactionTransfers',
+      path: '/transaction-transfer',
+      name: 'TransactionTransfer',
       component: () => import('@/views/transaction/TransactionTransfer.vue'),
       meta: {
-        title: 'Transaction Transfers',
+        title: 'Transaction Transfer',
+      },
+    },
+    {
+      path: '/transaction-saving',
+      name: 'TransactionSaving',
+      component: () => import('@/views/transaction/TransactionSaving.vue'),
+      meta: {
+        title: 'Transaction Saving',
       },
     },
   ],
