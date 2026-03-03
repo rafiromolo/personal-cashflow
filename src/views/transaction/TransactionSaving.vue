@@ -1,10 +1,10 @@
 <template>
   <admin-layout>
     <div class="mb-8">
-      <h2 class="text-2xl font-bold">Expenses</h2>
-      <span class="text-sm text-gray-600 italic"
-        >You can record and track your daily expenses here!</span
-      >
+      <h2 class="text-2xl font-bold">Savings</h2>
+      <span class="text-sm text-gray-600 italic">
+        You can record and track your savings here!
+      </span>
     </div>
 
     <div class="flex gap-2 mb-4">
@@ -15,15 +15,6 @@
         class="py-1.5 px-3 rounded-lg text-sm bg-gray-100 border border-gray-300 hover:bg-gray-200 hover:border-gray-400"
       />
 
-      <select
-        name="filter-category"
-        id="filter-category"
-        class="py-1.5 px-3 rounded-lg text-sm bg-gray-100 border border-gray-300 hover:bg-gray-200 hover:border-gray-400 focus:bg-gray-100"
-      >
-        <option value="all">All Categories</option>
-        <option value="fnb">Foods and Beverages</option>
-        <option value="transportation">Transportation</option>
-      </select>
       <button
         @click="open = true"
         class="py-1.5 px-3 rounded-lg text-sm text-white bg-green-700 border border-green-800 hover:bg-green-800 hover:border-green-900"
@@ -44,11 +35,10 @@
               <path d="M18 15v3m0 3v-3m0 0h-3m3 0h3" />
             </g>
           </svg>
-          Add Expense
+          Add Saving
         </div>
       </button>
     </div>
-
     <div class="relative overflow-x-auto rounded-lg border border-gray-300">
       <table class="w-full text-sm text-left">
         <thead class="text-sm text-body bg-neutral-100 border-b rounded-2xl">
@@ -56,9 +46,9 @@
             <th class="px-3 py-3 font-medium"></th>
             <th scope="col" class="px-3 py-3 font-semibold text-gray-600">Date</th>
             <th scope="col" class="px-3 py-3 font-semibold text-gray-600">Description</th>
-            <th scope="col" class="px-3 py-3 font-semibold text-gray-600">Category</th>
+            <th scope="col" class="px-3 py-3 font-semibold text-gray-600">Saving Category</th>
             <th scope="col" class="px-3 py-3 font-semibold text-gray-600">Amount</th>
-            <th scope="col" class="px-3 py-3 font-semibold text-gray-600">Account</th>
+            <th scope="col" class="px-3 py-3 font-semibold text-gray-600">Saving Account</th>
           </tr>
         </thead>
         <tbody>
@@ -92,11 +82,11 @@
                 </button>
               </div>
             </td>
-            <td class="px-3 py-3">14 February 2026</td>
-            <td class="px-3 py-3">Bubur Ayam</td>
-            <td class="px-3 py-3">Foods and Beverages</td>
-            <td class="px-3 py-3">Rp27.000</td>
-            <td class="px-3 py-3">Bank Jago</td>
+            <td class="px-3 py-3">20 February 2026</td>
+            <td class="px-3 py-3">Emas LM Hartadinata 1 gr</td>
+            <td class="px-3 py-3">Wedding</td>
+            <td class="px-3 py-3">Rp2.912.000</td>
+            <td class="px-3 py-3">Emas LM</td>
             <!-- <td colspan="6" class="px-6 py-3">
               <div class="flex flex-col items-center gap-1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16">
@@ -129,15 +119,15 @@
             />
           </div>
           <div class="flex flex-col gap-1">
-            <label for="expense-category">Category</label>
+            <label for="expense-category">Saving Category</label>
             <select
               name="expense-category"
               id="expense-category"
               class="w-full py-1.5 px-3 rounded-lg text-sm bg-gray-100 border border-gray-300 hover:bg-gray-200 hover:border-gray-400 focus:bg-gray-100"
             >
               <option value="all">All Categories</option>
-              <option value="fnb">Foods and Beverages</option>
-              <option value="transportation">Transportation</option>
+              <option value="salary">Wedding</option>
+              <option value="side-hustle">House</option>
             </select>
           </div>
           <div class="flex flex-col gap-1">
@@ -151,14 +141,14 @@
             />
           </div>
           <div class="flex flex-col gap-1">
-            <label for="expense-account">Account</label>
+            <label for="expense-account">Saving Account</label>
             <select
               name="expense-account"
               id="expense-account"
               class="w-full py-1.5 px-3 rounded-lg text-sm bg-gray-100 border border-gray-300 hover:bg-gray-200 hover:border-gray-400 focus:bg-gray-100"
             >
-              <option value="cash">Cash</option>
-              <option value="mandiri">Bank Mandiri</option>
+              <option value="reksadana">Bibit Reksadana</option>
+              <option value="emas">Emas LM</option>
               <option value="jago">Bank Jago</option>
             </select>
           </div>

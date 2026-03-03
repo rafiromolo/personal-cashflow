@@ -1,10 +1,10 @@
 <template>
   <admin-layout>
     <div class="mb-8">
-      <h2 class="text-2xl font-bold">Expenses</h2>
-      <span class="text-sm text-gray-600 italic"
-        >You can record and track your daily expenses here!</span
-      >
+      <h2 class="text-2xl font-bold">Incomes</h2>
+      <span class="text-sm text-gray-600 italic">
+        You can record and track your daily incomes here!
+      </span>
     </div>
 
     <div class="flex gap-2 mb-4">
@@ -21,8 +21,8 @@
         class="py-1.5 px-3 rounded-lg text-sm bg-gray-100 border border-gray-300 hover:bg-gray-200 hover:border-gray-400 focus:bg-gray-100"
       >
         <option value="all">All Categories</option>
-        <option value="fnb">Foods and Beverages</option>
-        <option value="transportation">Transportation</option>
+        <option value="salary">Salary</option>
+        <option value="side-hustle">Side Hustle</option>
       </select>
       <button
         @click="open = true"
@@ -44,7 +44,7 @@
               <path d="M18 15v3m0 3v-3m0 0h-3m3 0h3" />
             </g>
           </svg>
-          Add Expense
+          Add Income
         </div>
       </button>
     </div>
@@ -92,11 +92,11 @@
                 </button>
               </div>
             </td>
-            <td class="px-3 py-3">14 February 2026</td>
-            <td class="px-3 py-3">Bubur Ayam</td>
-            <td class="px-3 py-3">Foods and Beverages</td>
-            <td class="px-3 py-3">Rp27.000</td>
-            <td class="px-3 py-3">Bank Jago</td>
+            <td class="px-3 py-3">27 February 2026</td>
+            <td class="px-3 py-3">Main Salary PT Mekar Armada Jaya</td>
+            <td class="px-3 py-3">Salary</td>
+            <td class="px-3 py-3">Rp5.638.959</td>
+            <td class="px-3 py-3">Bank Mandiri</td>
             <!-- <td colspan="6" class="px-6 py-3">
               <div class="flex flex-col items-center gap-1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16">
@@ -136,8 +136,8 @@
               class="w-full py-1.5 px-3 rounded-lg text-sm bg-gray-100 border border-gray-300 hover:bg-gray-200 hover:border-gray-400 focus:bg-gray-100"
             >
               <option value="all">All Categories</option>
-              <option value="fnb">Foods and Beverages</option>
-              <option value="transportation">Transportation</option>
+              <option value="salary">Salary</option>
+              <option value="side-hustle">Side Hustle</option>
             </select>
           </div>
           <div class="flex flex-col gap-1">

@@ -1,10 +1,10 @@
 <template>
   <admin-layout>
     <div class="mb-8">
-      <h2 class="text-2xl font-bold">Expenses</h2>
-      <span class="text-sm text-gray-600 italic"
-        >You can record and track your daily expenses here!</span
-      >
+      <h2 class="text-2xl font-bold">Transfers</h2>
+      <span class="text-sm text-gray-600 italic">
+        You can record and track your daily transfers here!
+      </span>
     </div>
 
     <div class="flex gap-2 mb-4">
@@ -14,16 +14,6 @@
         id="filter-date"
         class="py-1.5 px-3 rounded-lg text-sm bg-gray-100 border border-gray-300 hover:bg-gray-200 hover:border-gray-400"
       />
-
-      <select
-        name="filter-category"
-        id="filter-category"
-        class="py-1.5 px-3 rounded-lg text-sm bg-gray-100 border border-gray-300 hover:bg-gray-200 hover:border-gray-400 focus:bg-gray-100"
-      >
-        <option value="all">All Categories</option>
-        <option value="fnb">Foods and Beverages</option>
-        <option value="transportation">Transportation</option>
-      </select>
       <button
         @click="open = true"
         class="py-1.5 px-3 rounded-lg text-sm text-white bg-green-700 border border-green-800 hover:bg-green-800 hover:border-green-900"
@@ -44,7 +34,7 @@
               <path d="M18 15v3m0 3v-3m0 0h-3m3 0h3" />
             </g>
           </svg>
-          Add Expense
+          Add Transfer
         </div>
       </button>
     </div>
@@ -56,9 +46,9 @@
             <th class="px-3 py-3 font-medium"></th>
             <th scope="col" class="px-3 py-3 font-semibold text-gray-600">Date</th>
             <th scope="col" class="px-3 py-3 font-semibold text-gray-600">Description</th>
-            <th scope="col" class="px-3 py-3 font-semibold text-gray-600">Category</th>
             <th scope="col" class="px-3 py-3 font-semibold text-gray-600">Amount</th>
-            <th scope="col" class="px-3 py-3 font-semibold text-gray-600">Account</th>
+            <th scope="col" class="px-3 py-3 font-semibold text-gray-600">From</th>
+            <th scope="col" class="px-3 py-3 font-semibold text-gray-600">To</th>
           </tr>
         </thead>
         <tbody>
@@ -92,11 +82,11 @@
                 </button>
               </div>
             </td>
-            <td class="px-3 py-3">14 February 2026</td>
-            <td class="px-3 py-3">Bubur Ayam</td>
-            <td class="px-3 py-3">Foods and Beverages</td>
-            <td class="px-3 py-3">Rp27.000</td>
+            <td class="px-3 py-3">28 January 2026</td>
+            <td class="px-3 py-3">Topup Gopay</td>
+            <td class="px-3 py-3">Rp76.590</td>
             <td class="px-3 py-3">Bank Jago</td>
+            <td class="px-3 py-3">Gopay</td>
             <!-- <td colspan="6" class="px-6 py-3">
               <div class="flex flex-col items-center gap-1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16">
@@ -129,18 +119,6 @@
             />
           </div>
           <div class="flex flex-col gap-1">
-            <label for="expense-category">Category</label>
-            <select
-              name="expense-category"
-              id="expense-category"
-              class="w-full py-1.5 px-3 rounded-lg text-sm bg-gray-100 border border-gray-300 hover:bg-gray-200 hover:border-gray-400 focus:bg-gray-100"
-            >
-              <option value="all">All Categories</option>
-              <option value="fnb">Foods and Beverages</option>
-              <option value="transportation">Transportation</option>
-            </select>
-          </div>
-          <div class="flex flex-col gap-1">
             <label for="expense-amount">Amount</label>
             <input
               type="text"
@@ -151,10 +129,22 @@
             />
           </div>
           <div class="flex flex-col gap-1">
-            <label for="expense-account">Account</label>
+            <label for="expense-account-from">From</label>
             <select
-              name="expense-account"
-              id="expense-account"
+              name="expense-account-from"
+              id="expense-account-from"
+              class="w-full py-1.5 px-3 rounded-lg text-sm bg-gray-100 border border-gray-300 hover:bg-gray-200 hover:border-gray-400 focus:bg-gray-100"
+            >
+              <option value="cash">Cash</option>
+              <option value="mandiri">Bank Mandiri</option>
+              <option value="jago">Bank Jago</option>
+            </select>
+          </div>
+          <div class="flex flex-col gap-1">
+            <label for="expense-account-to">To</label>
+            <select
+              name="expense-account-to"
+              id="expense-account-to"
               class="w-full py-1.5 px-3 rounded-lg text-sm bg-gray-100 border border-gray-300 hover:bg-gray-200 hover:border-gray-400 focus:bg-gray-100"
             >
               <option value="cash">Cash</option>

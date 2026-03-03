@@ -179,8 +179,19 @@ const menuGroups = [
         subItems: [
           { name: 'Expense', path: '/transaction-expense', pro: false },
           { name: 'Income', path: '/transaction-income', pro: false },
-          { name: 'Transfers', path: '/transaction-transfers', pro: false },
+          { name: 'Transfer', path: '/transaction-transfer', pro: false },
+          { name: 'Saving', path: '/transaction-saving', pro: false },
         ],
+      },
+      {
+        icon: DashboardIcon,
+        name: 'Budgeting',
+        path: '/budgeting',
+      },
+      {
+        icon: DashboardIcon,
+        name: 'Assets',
+        path: '/assets',
       },
     ],
   },

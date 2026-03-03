@@ -25,17 +25,41 @@ const router = createRouter({
     {
       path: '/transaction-income',
       name: 'TransactionIncome',
-      component: () => import('@/views/errors/UnderConstruction.vue'),
+      component: () => import('@/views/transaction/TransactionIncome.vue'),
       meta: {
         title: 'Transaction Income',
       },
     },
     {
-      path: '/transaction-transfers',
-      name: 'TransactionTransfers',
+      path: '/transaction-transfer',
+      name: 'TransactionTransfer',
+      component: () => import('@/views/transaction/TransactionTransfer.vue'),
+      meta: {
+        title: 'Transaction Transfer',
+      },
+    },
+    {
+      path: '/transaction-saving',
+      name: 'TransactionSaving',
+      component: () => import('@/views/transaction/TransactionSaving.vue'),
+      meta: {
+        title: 'Transaction Saving',
+      },
+    },
+    {
+      path: '/budgeting',
+      name: 'Budgeting',
+      component: () => import('@/views/budgeting/Budgeting.vue'),
+      meta: {
+        title: 'Budgeting',
+      },
+    },
+    {
+      path: '/assets',
+      name: 'Assets',
       component: () => import('@/views/errors/UnderConstruction.vue'),
       meta: {
-        title: 'Transaction Transfers',
+        title: 'Assets',
       },
     },
   ],
