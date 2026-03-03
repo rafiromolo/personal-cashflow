@@ -46,6 +46,22 @@ const router = createRouter({
         title: 'Transaction Saving',
       },
     },
+    {
+      path: '/budgeting',
+      name: 'Budgeting',
+      component: () => import('@/views/errors/UnderConstruction.vue'),
+      meta: {
+        title: 'Budgeting',
+      },
+    },
+    {
+      path: '/assets',
+      name: 'Assets',
+      component: () => import('@/views/errors/UnderConstruction.vue'),
+      meta: {
+        title: 'Assets',
+      },
+    },
   ],
 })
 

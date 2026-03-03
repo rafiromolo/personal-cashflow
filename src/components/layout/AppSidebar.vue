@@ -183,6 +183,16 @@ const menuGroups = [
           { name: 'Saving', path: '/transaction-saving', pro: false },
         ],
       },
+      {
+        icon: DashboardIcon,
+        name: 'Budgeting',
+        path: '/budgeting',
+      },
+      {
+        icon: DashboardIcon,
+        name: 'Assets',
+        path: '/assets',
+      },
     ],
   },
 ]
