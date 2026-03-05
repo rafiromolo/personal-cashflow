@@ -159,7 +159,7 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useSidebar } from '@/composables/useSidebar'
-import { ChevronDownIcon, DashboardIcon, TransactionIcon } from '@/icons'
+import { ChevronDownIcon, DashboardIcon, TransactionIcon, BudgetingIcon } from '@/icons'
 import SidebarWidget from './SidebarWidget.vue'
 
 const route = useRoute()
@@ -184,7 +184,7 @@ const menuGroups = [
         ],
       },
       {
-        icon: DashboardIcon,
+        icon: BudgetingIcon,
         name: 'Budgeting',
         path: '/budgeting',
       },
