@@ -47,8 +47,8 @@ const router = createRouter({
       },
     },
     {
-      path: '/budgeting',
-      name: 'Budgeting',
+      path: '/budgeting-main',
+      name: 'BudgetingMain',
       component: () => import('@/views/budgeting/Budgeting.vue'),
       meta: {
         title: 'Budgeting',
@@ -60,6 +60,14 @@ const router = createRouter({
       component: () => import('@/views/errors/UnderConstruction.vue'),
       meta: {
         title: 'Assets',
+      },
+    },
+    {
+      path: '/setup',
+      name: 'Setup',
+      component: () => import('@/views/setup/Setup.vue'),
+      meta: {
+        title: 'Setup',
       },
     },
   ],

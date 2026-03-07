@@ -186,12 +186,17 @@ const menuGroups = [
       {
         icon: BudgetingIcon,
         name: 'Budgeting',
-        path: '/budgeting',
+        subItems: [{ name: 'Main Budget', path: '/budgeting-main', pro: false }],
       },
       {
         icon: DashboardIcon,
         name: 'Assets',
         path: '/assets',
+      },
+      {
+        icon: DashboardIcon,
+        name: 'Setup',
+        path: '/setup',
       },
     ],
   },

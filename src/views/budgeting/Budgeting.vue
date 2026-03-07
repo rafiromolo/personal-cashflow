@@ -31,7 +31,7 @@
       </button>
       <button
         @click="open = true"
-        class="py-1.5 px-3 rounded-lg text-sm text-white bg-green-700 border border-green-800 hover:bg-green-800 hover:border-green-900"
+        class="py-1.5 px-3 rounded-lg text-sm text-white bg-blue-700 border border-blue-800 hover:bg-blue-800 hover:border-blue-900"
       >
         <div class="flex items-center gap-2">
           <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 20 20">
